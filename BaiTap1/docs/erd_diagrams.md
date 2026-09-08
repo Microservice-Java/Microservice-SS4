@@ -2,7 +2,10 @@
 
 Tài liệu thiết kế sơ đồ ERD chi tiết cho 5 CSDL Microservices thuộc hệ thống Bệnh viện Đa khoa MediCare.
 
+![MediCare ERD Overview Diagram](erd_diagram.png)
+
 ---
+
 
 ## 1. Patient Service ERD (`medicare_patient_db`)
 
