@@ -1,0 +1,475 @@
+{
+	"info": {
+		"_postman_id": "medicare-hospital-microservices-api",
+		"name": "MediCare Hospital Microservices API Collection",
+		"description": "Postman Collection for MediCare Hospital System Microservices (SS4 Exercise 2)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Patient Service",
+			"item": [
+				{
+					"name": "Create Patient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fullName\": \"Nguyen Van A\",\n  \"gender\": \"MALE\",\n  \"dateOfBirth\": \"1990-05-15\",\n  \"phoneNumber\": \"0912345678\",\n  \"address\": \"123 Le Loi, District 1, HCMC\",\n  \"emergencyContact\": \"0987654321\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/patients",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8081",
+							"path": ["api", "patients"]
+						}
+					}
+				},
+				{
+					"name": "Get All Patients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/patients",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8081",
+							"path": ["api", "patients"]
+						}
+					}
+				},
+				{
+					"name": "Get Patient By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/patients/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8081",
+							"path": ["api", "patients", "1"]
+						}
+					}
+				},
+				{
+					"name": "Update Patient",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fullName\": \"Nguyen Van A (Updated)\",\n  \"gender\": \"MALE\",\n  \"dateOfBirth\": \"1990-05-15\",\n  \"phoneNumber\": \"0912345678\",\n  \"address\": \"456 Nguyen Hue, District 1, HCMC\",\n  \"emergencyContact\": \"0987654321\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/patients/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8081",
+							"path": ["api", "patients", "1"]
+						}
+					}
+				},
+				{
+					"name": "Delete Patient",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/patients/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8081",
+							"path": ["api", "patients", "1"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Doctor Service",
+			"item": [
+				{
+					"name": "Create Doctor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fullName\": \"Dr. Tran Van B\",\n  \"specialization\": \"Cardiology\",\n  \"phoneNumber\": \"0909090909\",\n  \"email\": \"tranvanb@medicare.com\",\n  \"yearsOfExperience\": 10,\n  \"department\": \"Cardiovascular\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/doctors",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8082",
+							"path": ["api", "doctors"]
+						}
+					}
+				},
+				{
+					"name": "Get All Doctors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/doctors",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8082",
+							"path": ["api", "doctors"]
+						}
+					}
+				},
+				{
+					"name": "Get Doctor By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/doctors/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8082",
+							"path": ["api", "doctors", "1"]
+						}
+					}
+				},
+				{
+					"name": "Update Doctor",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fullName\": \"Dr. Tran Van B (Senior)\",\n  \"specialization\": \"Cardiology\",\n  \"phoneNumber\": \"0909090909\",\n  \"email\": \"tranvanb@medicare.com\",\n  \"yearsOfExperience\": 12,\n  \"department\": \"Cardiovascular\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/doctors/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8082",
+							"path": ["api", "doctors", "1"]
+						}
+					}
+				},
+				{
+					"name": "Delete Doctor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/doctors/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8082",
+							"path": ["api", "doctors", "1"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Appointment Service",
+			"item": [
+				{
+					"name": "Create Appointment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"patientId\": 1,\n  \"doctorId\": 1,\n  \"appointmentTime\": \"2026-09-10T10:00:00\",\n  \"status\": \"SCHEDULED\",\n  \"reason\": \"Regular Heart Checkup\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/appointments",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8083",
+							"path": ["api", "appointments"]
+						}
+					}
+				},
+				{
+					"name": "Get All Appointments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/appointments",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8083",
+							"path": ["api", "appointments"]
+						}
+					}
+				},
+				{
+					"name": "Get Appointment By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/appointments/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8083",
+							"path": ["api", "appointments", "1"]
+						}
+					}
+				},
+				{
+					"name": "Update Appointment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"patientId\": 1,\n  \"doctorId\": 1,\n  \"appointmentTime\": \"2026-09-10T11:00:00\",\n  \"status\": \"CONFIRMED\",\n  \"reason\": \"Regular Heart Checkup - Rescheduled\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/appointments/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8083",
+							"path": ["api", "appointments", "1"]
+						}
+					}
+				},
+				{
+					"name": "Delete Appointment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/appointments/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8083",
+							"path": ["api", "appointments", "1"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Medical Record Service",
+			"item": [
+				{
+					"name": "Create Medical Record",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"patientId\": 1,\n  \"doctorId\": 1,\n  \"diagnosis\": \"Mild Hypertension\",\n  \"treatmentPlan\": \"Low salt diet and daily walking 30 mins\",\n  \"recordDate\": \"2026-09-08T09:30:00\",\n  \"notes\": \"Recheck blood pressure in 2 weeks\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8084/api/medical-records",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8084",
+							"path": ["api", "medical-records"]
+						}
+					}
+				},
+				{
+					"name": "Get All Medical Records",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/api/medical-records",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8084",
+							"path": ["api", "medical-records"]
+						}
+					}
+				},
+				{
+					"name": "Get Medical Record By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/api/medical-records/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8084",
+							"path": ["api", "medical-records", "1"]
+						}
+					}
+				},
+				{
+					"name": "Update Medical Record",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"patientId\": 1,\n  \"doctorId\": 1,\n  \"diagnosis\": \"Mild Hypertension & High Cholesterol\",\n  \"treatmentPlan\": \"Low salt diet, daily walking 30 mins, prescribed Statin\",\n  \"recordDate\": \"2026-09-08T09:30:00\",\n  \"notes\": \"Follow up next month\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8084/api/medical-records/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8084",
+							"path": ["api", "medical-records", "1"]
+						}
+					}
+				},
+				{
+					"name": "Delete Medical Record",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/api/medical-records/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8084",
+							"path": ["api", "medical-records", "1"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Pharmacy Service",
+			"item": [
+				{
+					"name": "Create Medicine",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Paracetamol 500mg\",\n  \"category\": \"Analgesic\",\n  \"price\": 15000.0,\n  \"stockQuantity\": 500,\n  \"manufacturer\": \"Pharmacity Ltd\",\n  \"expiryDate\": \"2028-12-31\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/medicines",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8085",
+							"path": ["api", "medicines"]
+						}
+					}
+				},
+				{
+					"name": "Get All Medicines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/medicines",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8085",
+							"path": ["api", "medicines"]
+						}
+					}
+				},
+				{
+					"name": "Get Medicine By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/medicines/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8085",
+							"path": ["api", "medicines", "1"]
+						}
+					}
+				},
+				{
+					"name": "Update Medicine",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Paracetamol 500mg Extra\",\n  \"category\": \"Analgesic\",\n  \"price\": 18000.0,\n  \"stockQuantity\": 450,\n  \"manufacturer\": \"Pharmacity Ltd\",\n  \"expiryDate\": \"2028-12-31\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/medicines/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8085",
+							"path": ["api", "medicines", "1"]
+						}
+					}
+				},
+				{
+					"name": "Delete Medicine",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/medicines/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8085",
+							"path": ["api", "medicines", "1"]
+						}
+					}
+				}
+			]
+		}
+	]
+}
