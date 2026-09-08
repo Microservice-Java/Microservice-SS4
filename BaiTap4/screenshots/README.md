@@ -1,33 +1,22 @@
-# Screenshots & Dashboard Verification - SS4 Exercise 4
+# Screenshots & Eureka Dashboard Verification - SS4 Exercise 4
 
-## 1. Eureka Server Dashboard Verification (`http://localhost:8761`)
+Thư mục lưu trữ ảnh chụp màn hình kiểm thử cho **Bài Tập 4 (SS4)**:
 
-Thư mục này lưu trữ ảnh minh họa giao diện Eureka Dashboard hiển thị đầy đủ 5 Microservice đã đăng ký thành công:
+---
 
-- `PATIENT-SERVICE` (Status: UP)
-- `DOCTOR-SERVICE` (Status: UP)
-- `APPOINTMENT-SERVICE` (Status: UP)
-- `MEDICAL-RECORD-SERVICE` (Status: UP)
-- `PHARMACY-SERVICE` (Status: UP)
+## 1. Giao Diện Eureka Dashboard 5 Microservices (`http://localhost:8761`)
 
-```text
-================================================================================
-                               EUREKA DASHBOARD
-================================================================================
-System Status: UP
-Environment: test
+- **File**: `eureka_dashboard.png`
+- **URL**: `http://localhost:8761`
+- **Mô tả**: Ảnh chụp màn hình bảng điều khiển Eureka Service Discovery Dashboard hiển thị đầy đủ 5 Microservices đã đăng ký thành công với trạng thái `UP`:
 
-Instances currently registered with Eureka:
---------------------------------------------------------------------------------
-Application             AMIs   Availability Zones   Status
---------------------------------------------------------------------------------
-PATIENT-SERVICE         n/a    (1)                  UP (1) - 192.168.1.5:8081
-DOCTOR-SERVICE          n/a    (1)                  UP (1) - 192.168.1.5:8082
-APPOINTMENT-SERVICE     n/a    (1)                  UP (1) - 192.168.1.5:8083
-MEDICAL-RECORD-SERVICE  n/a    (1)                  UP (1) - 192.168.1.5:8084
-PHARMACY-SERVICE        n/a    (1)                  UP (1) - 192.168.1.5:8085
-================================================================================
-```
+1. `PATIENT-SERVICE` (Port 8081)
+2. `DOCTOR-SERVICE` (Port 8082)
+3. `APPOINTMENT-SERVICE` (Port 8083)
+4. `MEDICAL-RECORD-SERVICE` (Port 8084)
+5. `PHARMACY-SERVICE` (Port 8085)
+
+![Eureka Dashboard 5 Microservices](eureka_dashboard.png)
 
 ---
 
