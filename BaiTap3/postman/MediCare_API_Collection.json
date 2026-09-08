@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "medicare-config-server-api-collection",
+		"name": "MediCare Config Server & Microservices API Collection (SS4 - Exercise 3)",
+		"description": "Postman Collection for Config Server endpoints and MediCare Microservices (SS4 Exercise 3)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Config Server Endpoints",
+			"item": [
+				{
+					"name": "Get Patient Service Config",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/patient-service/default",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8888",
+							"path": ["patient-service", "default"]
+						}
+					}
+				},
+				{
+					"name": "Get Doctor Service Config",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/doctor-service/default",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8888",
+							"path": ["doctor-service", "default"]
+						}
+					}
+				},
+				{
+					"name": "Get Appointment Service Config",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/appointment-service/default",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8888",
+							"path": ["appointment-service", "default"]
+						}
+					}
+				},
+				{
+					"name": "Get Medical Record Service Config",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/medical-record-service/default",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8888",
+							"path": ["medical-record-service", "default"]
+						}
+					}
+				},
+				{
+					"name": "Get Pharmacy Service Config",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/pharmacy-service/default",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8888",
+							"path": ["pharmacy-service", "default"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Patient Service (Port 8081)",
+			"item": [
+				{
+					"name": "Get All Patients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/patients",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8081",
+							"path": ["api", "patients"]
+						}
+					}
+				},
+				{
+					"name": "Create Patient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fullName\": \"Nguyen Van A\",\n  \"gender\": \"MALE\",\n  \"dateOfBirth\": \"1990-05-15\",\n  \"phoneNumber\": \"0912345678\",\n  \"address\": \"123 Le Loi, District 1, HCMC\",\n  \"emergencyContact\": \"0987654321\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/patients",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8081",
+							"path": ["api", "patients"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Doctor Service (Port 8082)",
+			"item": [
+				{
+					"name": "Get All Doctors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/doctors",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8082",
+							"path": ["api", "doctors"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Appointment Service (Port 8083)",
+			"item": [
+				{
+					"name": "Get All Appointments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/appointments",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8083",
+							"path": ["api", "appointments"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Medical Record Service (Port 8084)",
+			"item": [
+				{
+					"name": "Get All Medical Records",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/api/medical-records",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8084",
+							"path": ["api", "medical-records"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Pharmacy Service (Port 8085)",
+			"item": [
+				{
+					"name": "Get All Medicines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/medicines",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8085",
+							"path": ["api", "medicines"]
+						}
+					}
+				}
+			]
+		}
+	]
+}
