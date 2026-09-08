@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "medicare-discovery-config-collection",
+		"name": "MediCare Discovery & Config Server API Collection (SS4 - Exercise 4)",
+		"description": "Postman Collection for Eureka Discovery Server, Config Server (Git Backend), and MediCare Microservices (SS4 Exercise 4)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Discovery Server (Eureka)",
+			"item": [
+				{
+					"name": "Get Eureka Dashboard Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8761",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8761"
+						}
+					}
+				},
+				{
+					"name": "Get Eureka Registered Apps (JSON)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8761/eureka/apps",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8761",
+							"path": ["eureka", "apps"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Config Server Endpoints (Git Backend)",
+			"item": [
+				{
+					"name": "Get Patient Service Config from Git",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/patient-service/default",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8888",
+							"path": ["patient-service", "default"]
+						}
+					}
+				},
+				{
+					"name": "Get Doctor Service Config from Git",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/doctor-service/default",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8888",
+							"path": ["doctor-service", "default"]
+						}
+					}
+				},
+				{
+					"name": "Get Appointment Service Config from Git",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/appointment-service/default",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8888",
+							"path": ["appointment-service", "default"]
+						}
+					}
+				},
+				{
+					"name": "Get Medical Record Service Config from Git",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/medical-record-service/default",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8888",
+							"path": ["medical-record-service", "default"]
+						}
+					}
+				},
+				{
+					"name": "Get Pharmacy Service Config from Git",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/pharmacy-service/default",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8888",
+							"path": ["pharmacy-service", "default"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Microservices REST APIs",
+			"item": [
+				{
+					"name": "Get Patients (Port 8081)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/patients",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8081",
+							"path": ["api", "patients"]
+						}
+					}
+				},
+				{
+					"name": "Get Doctors (Port 8082)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/doctors",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8082",
+							"path": ["api", "doctors"]
+						}
+					}
+				},
+				{
+					"name": "Get Appointments (Port 8083)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/appointments",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8083",
+							"path": ["api", "appointments"]
+						}
+					}
+				},
+				{
+					"name": "Get Medical Records (Port 8084)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/api/medical-records",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8084",
+							"path": ["api", "medical-records"]
+						}
+					}
+				},
+				{
+					"name": "Get Medicines (Port 8085)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/medicines",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8085",
+							"path": ["api", "medicines"]
+						}
+					}
+				}
+			]
+		}
+	]
+}
